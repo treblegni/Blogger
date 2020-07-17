@@ -1,6 +1,6 @@
 import thunk from 'redux-thunk';
 import history from './history';
-import ReduxDevTools from '../utils/DevTools';
+import ReduxDevTools from '../../utils/DevTools';
 import createRootReducer from '../reducers';
 import { createStore,applyMiddleware,compose } from 'redux';
 
