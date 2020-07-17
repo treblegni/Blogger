@@ -5,7 +5,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import { connect } from 'react-redux';
 import { compose } from 'recompose';
 import { getBlogs } from '../flux/actions/blogActions';
-import { Switch,Route } from 'react-router-dom';
 
 
 
