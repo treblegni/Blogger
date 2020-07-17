@@ -11,13 +11,14 @@ const BlogEditor = ({ visible,setVisibility,addBlog })=> {
     const [blog, setBlog] = useState({title: "",message: ""})
 
     const handleClose = () => {
+        setBlog({title: "",message: ""});
         setVisibility(visible);
     }
 
     const handleSubmit = () => {
-        console.log(blog);
         addBlog(blog);
-        handleClose();
+        setBlog({title: "",message: ""});
+        setVisibility(visible);
     }
 
     const handleChange = e => {
@@ -38,7 +39,7 @@ const BlogEditor = ({ visible,setVisibility,addBlog })=> {
                 aria-labelledby="contained-modal-title-vcenter"
                 centered>
                 <Modal.Header closeButton>
-                    <Modal.Title>Add Post</Modal.Title>
+                    <Modal.Title>Add Blog</Modal.Title>
                 </Modal.Header>
                 <Form>
                     <Modal.Body>
@@ -59,6 +60,7 @@ const BlogEditor = ({ visible,setVisibility,addBlog })=> {
                                 name='message'
                                 as="textarea" 
                                 rows="10" 
+                                style={{resize: 'none'}}
                                 onChange={handleChange}/>
                         </Form.Group>
                     </Modal.Body>
@@ -67,7 +69,7 @@ const BlogEditor = ({ visible,setVisibility,addBlog })=> {
                             Close
                         </Button>
                         <Button variant="primary" onClick={handleSubmit}>
-                            Post
+                            Blog
                         </Button>
                     </Modal.Footer>
                 </Form>
