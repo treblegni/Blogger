@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import storeConfig from './store/';
-import history from './store/history';
+import App from './components/App';
+import storeConfig from './flux/store/';
+import history from './flux/store/history';
 import { Provider } from 'react-redux';
 import { Route} from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
 
+import './stylesheets/main.sass';
+
 //TODO: REMOVE ON PRODUCTION
 import ReduxDevTools from './utils/DevTools';
-
-import './index.css';
 
 const store = storeConfig();
 
